@@ -3,6 +3,7 @@ html {
 }
 body {
   margin-bottom: 120px;
+  margin-top: 30px;
 }
 
 .about p {
@@ -12,7 +13,7 @@ body {
 footer {
   position: absolute;
   width: 100%;
-  height: 120px;
+  height: 100px;
   bottom: 0;
   background-color: #333;
   padding-top: 30px;
@@ -46,6 +47,6 @@ section {
 }
 
 .contact {
-  min-height: 650px;
+  min-height: 300px;
   width: 100%;
 }

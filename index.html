@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,9 +10,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navbar start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#btn-collapse"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="#home" class="navbar-brand page-scroll">
+            Ahmada Itmamunnafi'
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="btn-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about" class="page-scroll">About</a></li>
+            <li><a href="#portfolio" class="page-scroll">Portfolio</a></li>
+            <li><a href="#contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
     <!-- jumbotron start -->
     <div class="jumbotron text-center">
-      <img src="styles/img/mada.png" class="img-circle" alt="mypic" />
+      <div class="foto" data-tilt>
+        <img src="styles/img/mada.png" class="img-circle" alt="mypic" />
+      </div>
       <h1>Ahmada Itmamunnafi'</h1>
       <p>Backend Web Developer | Embedded System Engineer</p>
     </div>
@@ -84,7 +118,7 @@
     <!-- Portfolio end -->
 
     <!-- Contact start -->
-    <!-- <section class="contact" id="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
@@ -92,50 +126,49 @@
             <hr />
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <form>
-              <div class="form-group">
-                <label for="nama">Nama</label>
-                <input
-                  type="text"
-                  id="nama"
-                  class="form-control"
-                  placeholder="Masukkan Nama"
+        <div class="contact-content">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=+6285707614937"
+              >
+                <img
+                  src="styles/img/160wa.png"
+                  class="img-circle"
+                  alt="wa"
+                  data-tilt
                 />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="text"
-                  id="email"
-                  class="form-control"
-                  placeholder="Masukkan Email"
+              </a>
+              <a target="_blank" href="https://linkedin.com/in/ahmada-it-k122/">
+                <img
+                  src="styles/img/160linked.png"
+                  class="img-circle"
+                  alt="linkedin"
+                  data-tilt
                 />
-              </div>
-              <div class="form-group">
-                <label for="telp">Nomor Telepon</label>
-                <input
-                  type="tel"
-                  id="telp"
-                  class="form-control"
-                  placeholder="Masukkan Nomor Telepon"
+              </a>
+              <a target="_blank" href="https://instagram.com/ahmada_it/">
+                <img
+                  src="styles/img/160ig.png"
+                  class="img-circle"
+                  alt="ig"
+                  data-tilt
                 />
-              </div>
-              <div class="form-group">
-                <label for="pesan">Pesan</label>
-                <textarea
-                  class="form-control"
-                  rows="10"
-                  placeholder="Masukkan Pesan"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn-primary">Kirim Pesan</button>
-            </form>
+              </a>
+              <a target="_blank" href="https://t.me/ahmada_it">
+                <img
+                  src="styles/img/160tele.png"
+                  class="img-circle"
+                  alt="tele"
+                  data-tilt
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Contact end -->
 
     <footer>
@@ -144,8 +177,7 @@
           <div class="col-sm-12">
             <p>
               &copy; Copyright 2021 | Made with
-              <i class="glyphicon glyphicon-heart"></i
-              ><a href="https://instagram.com/ahmada_it/"> Ahmada It</a>
+              <i class="glyphicon glyphicon-heart"></i> by Ahmada It
             </p>
           </div>
         </div>
@@ -161,23 +193,24 @@
           <!-- <div class="col-sm-4">
             <a
               target="_blank"
-              href="https://instagram.com/ahmada_it/"
+              href=""
               class="btn btn-danger"
               ><i class="glyphicon glyphicon-envelope"></i> Instagram</a
             >
           </div> -->
-          <div class="col-sm-4">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/ahmada-it-k122/"
-              class="btn btn-primary"
-              ><i class="glyphicon glyphicon-envelope"></i> LinkedIn</a
-            >
-          </div>
         </div>
       </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="styles/js/jquery-3.6.0.min.js"></script>
     <script src="styles/js/bootstrap.min.js"></script>
+    <script src="styles/js/script.js"></script>
+    <script type="text/javascript" src="styles/js/tilt.jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".foto").tilt({
+          scale: 1.2,
+        });
+      });
+    </script>
   </body>
 </html>
