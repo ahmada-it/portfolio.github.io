@@ -48,6 +48,26 @@ section {
 }
 
 .contact {
-  min-height: 300px;
+  min-height: 200px;
   width: 100%;
+}
+
+.contact-content a img {
+  width: 85px;
+  height: 85px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    min-height: 120px;
+  }
+  .contact-content a img {
+    width: 45px;
+    height: 45px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 }
